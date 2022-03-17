@@ -26,8 +26,9 @@ router.post("/", auth, (req, res) => {
   const newResale = new Resale({
     type: req.body.type,
     price: req.body.price,
-    zone: req.body.zone,
+    img: req.body.img,
     address: req.body.address,
+    description: req.body.description,
   });
   newResale.save().then((resale) => res.json(resale));
 });
